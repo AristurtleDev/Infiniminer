@@ -203,7 +203,7 @@ namespace Infiniminer
             basicEffect = gameInstance.Content.Load<Effect>("effect_basic");
 
             // Create states.
-            pointSamplerState = new SamplerState() { Filter = TextureFilter.Point };
+            pointSamplerState = new SamplerState() { Filter = TextureFilter.PointMipLinear };
 
             // Build vertex lists.
             vertexBuffers = new DynamicVertexBuffer[(byte)BlockTexture.MAXIMUM, NUMREGIONS];
