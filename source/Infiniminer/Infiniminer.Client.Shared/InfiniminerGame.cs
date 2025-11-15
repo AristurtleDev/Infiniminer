@@ -103,7 +103,9 @@ namespace Infiniminer
             // Discover remote servers.
             try
             {
-                string publicList = HttpRequest.Get("http://apps.keithholman.net/plain", null);
+                // 'serversV1.txt' format:
+                // name;IPaddress;INFINIMINER;numPlayers;maxPlayers;extra
+                string publicList = HttpRequest.Get("https://AristurtleDev.github.io/Infiniminer/serversV1.txt", null);
                 foreach (string s in publicList.Split("\r\n".ToCharArray()))
                 {
                     string[] args = s.Split(";".ToCharArray());
